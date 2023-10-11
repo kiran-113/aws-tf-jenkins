@@ -19,18 +19,18 @@ variable "aws_region" {
 
 variable "ami" {
   type        = string
-  description = "Ubuntu AMI ID"
-  default     = "ami-0f5ee92e2d63afc18"
+  description = "Amazon AMI ID"
+  default     = "ami-0c42696027a8ede58"
 }
 
 variable "instance_type" {
   type        = string
   description = "Instance type"
-  default     = "t2.micro"
+  default     = "t2.small"
 }
 
 variable "name_tag" {
   type        = string
   description = "Name of the EC2 instance"
-  default     = "Terraform-new"
+  default     = "Jenkins-Instance"
 }

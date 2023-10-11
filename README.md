@@ -6,3 +6,5 @@ Install jenkins in aws ec2 in AMAZON LINUX ONLY using the script in install_jenk
 This is parameterized jenkins pipeline
 
 after initilizeing , cliek on build and select build with parameter
+
+Note : It will take 3-5 min
