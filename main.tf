@@ -1,4 +1,5 @@
 # sample
+# second line
 resource "aws_instance" "jenkins_instance" {
   ami           = var.ami
   instance_type = var.instance_type
