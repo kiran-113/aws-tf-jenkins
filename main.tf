@@ -26,7 +26,7 @@ resource "aws_instance" "jenkins_instance" {
       "sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo",
       "sudo yum -y install terraform",
       "sudo systemctl status jenkins",
-      "logout",
+      "exit",
     ]
 
   }
