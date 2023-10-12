@@ -18,11 +18,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/kiran-113/aws-tf-jenkins.git'
             }
         }
-        stage('Terraform init upgrade') {
-            steps {
-                sh ("terraform init -upgrade")
-            }
-        }
+
         stage('Terraform init') {
             steps {
                 sh ("terraform init -reconfigure")
