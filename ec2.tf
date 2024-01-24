@@ -34,6 +34,9 @@ resource "aws_instance" "jenkins_instance" {
   }
 
 
+   metadata_options {
+     http_tokens = "required"
+   }
 }
 resource "tls_private_key" "oskey" {
   algorithm = "RSA"
