@@ -3,6 +3,11 @@ resource "aws_instance" "jenkins_instance" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name      = aws_key_pair.this.key_name
+  metadata_options {
+
+    http_endpoint = "disabled"
+    #http_tokens   = "required"
+  }
 
   tags = {
     Name = var.name_tag,

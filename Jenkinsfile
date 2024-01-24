@@ -31,10 +31,9 @@ pipeline {
         stage('Checkov') {
             steps {
                 script {
-                    docker.image('bridgecrew/checkov:latest').inside("--entrypoint=''") {
-                        sh 'checkov -d . --use-enforcement-rules -o cli -o junitxml --output-file-path console,checkov_results.xml --repo-id example/aws-tf-jenkins --branch main'
-                        junit skipPublishingChecks: true, testResults: 'checkov_results.xml'
-                    }
+                    sh "pipenv run  ~/.local/bin/pip3 install checkov"
+                    sh "pipenv run checkov -d . --use-enforcement-rules -o cli -o junitxml --output-file-path console,results.xml --repo-id kiran-113/aws-tf-jenkins --branch main"
+                    junit skipPublishingChecks: true, testResults: 'checkov_results.xml'
                 }
             }
         }
