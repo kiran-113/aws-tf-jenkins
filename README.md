@@ -2,6 +2,8 @@
 
 Install jenkins in aws ec2 in AMAZON LINUX ONLY
 
+kubectl port-forward service/springboot-k8ssvc 30925:9090
+
 ## change the git path in jenkinsfile @line no 18
 This is parameterized jenkins pipeline
 
